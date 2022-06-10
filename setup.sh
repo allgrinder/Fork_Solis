@@ -4,6 +4,10 @@ echo "### Installing pip3 ###"
 apt install python3-pip
 
 echo "### Installing requirements ###"
+sudo su
+umask 022
+pip3 install -r requirements.txt
+
 pip3 install -r /opt/solis2mqtt/requirements.txt
 
 echo "### Creating config file ###"
